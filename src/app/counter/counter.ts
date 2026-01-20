@@ -18,7 +18,7 @@ export class Counter {
   //   this.n = 0;
   
   // }
-  
+
   handleCounter(val: string) {
     if (val == "minus") {
       if (this.n > 0) this.n = this.n - 1;
