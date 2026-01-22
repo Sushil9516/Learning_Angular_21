@@ -1,0 +1,11 @@
+@for (item of items; track item) {
+  <p>{{ item }}</p>
+}
+
+@for (user of users; track user.id) {
+  <p>{{ user.name }}</p>
+  
+}
+
+<button (click)="increment()">+</button>
+<p>Count: {{ count() }}</p>
