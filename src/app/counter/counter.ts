@@ -21,6 +21,7 @@ export class Counter {
 
   handleCounter(val: string) {
     if (val == "minus") {
+      
       if (this.n > 0) this.n = this.n - 1;
     }
     else if (val == "plus") this.n = this.n + 1;
