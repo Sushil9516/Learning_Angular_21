@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { signal } from '@angular/core';
 
 @Component({
+  
   selector: 'app-test',
   imports: [],
   templateUrl: './test.html',
