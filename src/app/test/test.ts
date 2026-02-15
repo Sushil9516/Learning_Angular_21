@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { signal } from '@angular/core';
+import { runEffect } from '@angular/core/primitives/signals';
 
 @Component({
   selector: 'app-test',
@@ -9,15 +10,21 @@ import { signal } from '@angular/core';
 })
 export class Test {
   count = signal(0);
-
-  increment() {
-    this.count.update(v => v + 1);
+  data = 0;
+  Increment() {
+    this.count.set(this.count() + 1);
+    this.data++;
+  }
+  constructor() {
+    effect(() => {
+      console.log(this.data);
+      // console.log(this.count());
+    });
   }
 
-  items = ["Phone", "Laptop", "tablet"]
-  users = [
-    { id: 1, name: 'Sushil' },
-    { id: 2, name: 'Aman' }
-  ];
-
+  // items = ['Phone', 'Laptop', 'tablet'];
+  // users = [
+  //   { id: 1, name: 'Sushil' },
+  //   { id: 2, name: 'Aman' },
+  // ];
 }
