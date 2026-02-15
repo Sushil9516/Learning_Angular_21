@@ -3,6 +3,7 @@ import { signal } from '@angular/core';
 import { runEffect } from '@angular/core/primitives/signals';
 
 @Component({
+  
   selector: 'app-test',
   imports: [],
   templateUrl: './test.html',
