@@ -1,0 +1,4 @@
+<h1>{{data()}}</h1>
+<input [value]="data()" (input)="getValue($event.target.value)" type="text">
+<br>
+<button (click)="resetValue()">Reset value</button>

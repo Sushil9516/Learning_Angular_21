@@ -5,10 +5,11 @@ import { Signup } from "./signup/signup";
 import { Counter } from './counter/counter';
 import { Toggle } from './toggle/toggle';
 import { Test } from './test/test';
+import { InputData } from './input-data/input-data';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Test],
+  imports: [RouterOutlet, InputData],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
